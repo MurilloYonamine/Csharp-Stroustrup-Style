@@ -131,7 +131,7 @@ Feel free to suggest improvements or adjustments to this configuration through i
 
 <div align="center">
 
-**Developed with ❤️ for C# code standardization**
+**Written by Murillo Yonamine (Momodev)**
 
 </div>
 
