@@ -3,8 +3,10 @@
 > Standardized formatting configuration for C# projects using K&R/Stroustrup style
 
 <div align="center">
+
 [![EditorConfig](https://img.shields.io/badge/EditorConfig-Compatible-green.svg)](https://editorconfig.org/)
 [![C#](https://img.shields.io/badge/Language-C%23-blue.svg)](https://docs.microsoft.com/en-us/dotnet/csharp/)
+
 </div>
 
 ## 📋 About
