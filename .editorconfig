@@ -10,7 +10,7 @@ trim_trailing_whitespace = true # Remove extra spaces at the end of lines (clean
 insert_final_newline = true # Always add an empty line at the end of the file
 
 # New line preferences
-csharp_new_line_before_open_brace = all # Put opening braces { on new lines everywhere
+csharp_new_line_before_open_brace = none # Put opening braces { on new lines everywhere
 csharp_new_line_before_else = true # Put 'else' on a new line after the closing brace
 csharp_new_line_before_catch = true # Put 'catch' on a new line after the closing brace
 csharp_new_line_before_finally = true # Put 'finally' on a new line after the closing brace
