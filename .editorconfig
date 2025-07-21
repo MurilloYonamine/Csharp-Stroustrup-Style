@@ -1,107 +1,18 @@
-root = true # This file is the boss - no other config files above this one matter
+root = true
+# Indicates that this is the root .editorconfig file. No other .editorconfig files above this directory will be applied.
 
-[*.cs] # These rules only apply to C# files (files ending in .cs)
-# Core EditorConfig settings
-indent_style = space # Use spaces instead of tab characters when indenting code (like pressing spacebar 4 times)
-indent_size = 4 # Each indent level uses 4 spaces (like 4 steps to the right)
-end_of_line = crlf # Use Windows-style line endings (like pressing Enter on Windows)
-charset = utf-8 # Use UTF-8 encoding so special characters display correctly
-trim_trailing_whitespace = true # Remove extra spaces at the end of lines (clean up messy spaces)
-insert_final_newline = true # Always add an empty line at the end of the file
+[*.cs]
+# Applies the following rules to all C# files (*.cs).
 
-# New line preferences
-csharp_new_line_before_open_brace = none # Put opening braces { on new lines everywhere
-csharp_new_line_before_else = true # Put 'else' on a new line after the closing brace
-csharp_new_line_before_catch = true # Put 'catch' on a new line after the closing brace
-csharp_new_line_before_finally = true # Put 'finally' on a new line after the closing brace
-csharp_new_line_before_members_in_object_initializers = true # Put each property on new line in object creation
-csharp_new_line_before_members_in_anonymous_types = true # Put each property on new line in anonymous objects
-csharp_new_line_between_query_expression_clauses = true # Put LINQ clauses on separate lines
+indent_style = space # Specifies that spaces should be used for indentation.
+indent_size = 4 # Sets the number of spaces per indentation level to 4.
+end_of_line = crlf # Defines the line ending format as "carriage return + line feed" (CRLF), commonly used in Windows.
+charset = utf-8 # Specifies the character encoding as UTF-8.
 
-# Indentation preferences
-csharp_indent_case_contents = true # Indent code inside switch cases
-csharp_indent_switch_labels = true # Indent the case labels themselves
-csharp_indent_labels = flush_left # Keep goto labels at the far left (no indent)
-csharp_indent_block_contents = true # Indent code inside braces {}
-csharp_indent_braces = false # Don't indent the braces themselves
-csharp_indent_case_contents_when_block = true # Indent case contents even when using braces
+trim_trailing_whitespace = true # Removes any trailing whitespace at the end of lines.
+insert_final_newline = true # Ensures that files end with a newline.
 
-# Space preferences
-csharp_space_after_cast = false # No space after type casting: (int)value not (int) value
-csharp_space_after_keywords_in_control_flow_statements = true # Space after if, while, for: if (condition)
-csharp_space_before_colon_in_inheritance_clause = true # Space before colon: class Dog : Animal
-csharp_space_after_colon_in_inheritance_clause = true # Space after colon: class Dog : Animal
-csharp_space_around_binary_operators = before_and_after # Spaces around +, -, =: x = a + b
-csharp_space_between_method_call_parameter_list_parentheses = false # No spaces inside parentheses: Method(a, b)
-csharp_space_between_method_call_empty_parameter_list_parentheses = false # No spaces in empty parentheses: Method()
-csharp_space_between_method_declaration_parameter_list_parentheses = false # No spaces in method parameters: void Method(int x)
-csharp_space_between_method_declaration_empty_parameter_list_parentheses = false # No spaces in empty method parentheses: void Method()
-csharp_space_between_method_declaration_name_and_open_parenthesis = false # No space between method name and parentheses: Method() not Method ()
-csharp_space_between_method_call_name_and_opening_parenthesis = false # No space when calling methods: Method() not Method ()
-csharp_space_after_comma = true # Space after commas: Method(a, b, c)
-csharp_space_before_comma = false # No space before commas: Method(a, b) not Method(a , b)
-csharp_space_after_dot = false # No space after dots: object.Property not object. Property
-csharp_space_before_dot = false # No space before dots: object.Property not object .Property
-csharp_space_after_semicolon_in_for_statement = true # Space after semicolons in for loops: for (i = 0; i < 10; i++)
-csharp_space_before_semicolon_in_for_statement = false # No space before semicolons in for loops
-csharp_space_around_declaration_statements = false # No extra spaces around variable declarations
-csharp_space_before_open_square_brackets = false # No space before array brackets: array[0] not array [0]
-csharp_space_between_empty_square_brackets = false # No space in empty brackets: int[] not int[ ]
-csharp_space_between_square_brackets = false # No space inside brackets: array[0] not array[ 0 ]
-
-# Wrapping preferences
-csharp_preserve_single_line_statements = true # Keep short statements on one line: if (x) return;
-csharp_preserve_single_line_blocks = true # Keep short code blocks on one line: { return x; }
-
-# Code block preferences
-csharp_prefer_braces = true:warning # Always use braces {} even for single statements (show warning if missing)
-
-# Pattern matching preferences
-csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion # Use pattern matching instead of 'is' checks
-csharp_style_pattern_matching_over_as_with_null_check = true:suggestion # Use pattern matching instead of 'as' with null checks
-csharp_style_inlined_variable_declaration = true:suggestion # Declare variables inside method calls when possible
-
-# Expression-level preferences
-csharp_prefer_simple_using_statement = true:suggestion # Use simple using statements: using var file = ...
-csharp_style_throw_expression = true:suggestion # Use throw expressions in conditional operators
-csharp_style_conditional_delegate_call = true:suggestion # Use ?. when calling delegates: action?.Invoke()
-
-# Variable preferences
-csharp_style_var_for_built_in_types = false:silent # Don't use 'var' for built-in types like int, string
-csharp_style_var_when_type_is_apparent = true:silent # Use 'var' when type is obvious: var list = new List<int>()
-csharp_style_var_elsewhere = false:silent # Don't use 'var' in other cases
-
-# Expression-bodied members
-csharp_style_expression_bodied_methods = false:silent # Don't use => for methods, use full body with braces
-csharp_style_expression_bodied_constructors = false:silent # Don't use => for constructors
-csharp_style_expression_bodied_operators = false:silent # Don't use => for operators
-csharp_style_expression_bodied_properties = true:silent # Use => for properties: public string Name => _name;
-csharp_style_expression_bodied_indexers = true:silent # Use => for indexers
-csharp_style_expression_bodied_accessors = true:silent # Use => for get/set accessors
-
-# .NET formatting rules
-dotnet_sort_system_directives_first = true # Put 'using System;' statements first
-dotnet_separate_import_directive_groups = false # Don't add blank lines between different using groups
-
-# .NET style rules
-dotnet_style_qualification_for_field = false:silent # Don't require 'this.' for fields
-dotnet_style_qualification_for_property = false:silent # Don't require 'this.' for properties
-dotnet_style_qualification_for_method = false:silent # Don't require 'this.' for methods
-dotnet_style_qualification_for_event = false:silent # Don't require 'this.' for events
-dotnet_style_predefined_type_for_locals_parameters_members = true:silent # Use 'int' instead of 'Int32'
-dotnet_style_predefined_type_for_member_access = true:silent # Use 'int.MaxValue' instead of 'Int32.MaxValue'
-dotnet_style_require_accessibility_modifiers = for_non_interface_members:silent # Require public/private keywords (except in interfaces)
-dotnet_style_readonly_field = true:suggestion # Use 'readonly' for fields that don't change
-
-# Expression-level preferences
-dotnet_style_object_initializer = true:suggestion # Use object initializers: new Person { Name = "John" }
-dotnet_style_collection_initializer = true:suggestion # Use collection initializers: new List<int> { 1, 2, 3 }
-dotnet_style_explicit_tuple_names = true:suggestion # Use named tuple elements: (name: "John", age: 25)
-dotnet_style_null_propagation = true:suggestion # Use ?. operator: person?.Name instead of if checks
-dotnet_style_coalesce_expression = true:suggestion # Use ?? operator: name ?? "default"
-dotnet_style_prefer_is_null_check_over_reference_equality_method = true:suggestion # Use 'is null' instead of ReferenceEquals
-dotnet_style_prefer_inferred_tuple_names = true:suggestion # Let compiler infer tuple names when possible
-dotnet_style_prefer_inferred_anonymous_type_member_names = true:suggestion # Let compiler infer anonymous type property names
-dotnet_style_prefer_auto_properties = true:silent # Use auto-properties instead of backing fields when possible
-dotnet_style_prefer_conditional_expression_over_assignment = true:silent # Use ternary operator for simple assignments
-dotnet_style_prefer_conditional_expression_over_return = true:silent # Use ternary operator for simple returns
+csharp_new_line_before_open_brace = none  # Configures C# code style to not insert a new line before an opening brace.
+csharp_new_line_before_else = true # Ensures a new line is added before the `else` keyword in C# code.
+csharp_new_line_before_catch = true # Ensures a new line is added before the `catch` keyword in C# code.
+csharp_new_line_before_finally = true # Ensures a new line is added before the `finally` keyword in C# code.
